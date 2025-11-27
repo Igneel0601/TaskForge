@@ -23,6 +23,7 @@ export default function BoardsTiles({boards}:{boards:RoomInfo[]}) {
             </Link>
           ))}
         </div>
+        
     </>
   );
 }

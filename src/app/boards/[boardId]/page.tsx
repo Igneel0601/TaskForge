@@ -1,8 +1,9 @@
 'use server';
 
 import Board from "@/components/Board";
-import {liveblocksClient} from "@/lib/liveblocksClient";
-import {getUserEmail} from "@/lib/userClient";
+import BoardSummary from "@/components/Summary";
+import { liveblocksClient } from "@/lib/liveblocksClient";
+import { getUserEmail } from "@/lib/userClient";
 
 type PageProps = {
   params: {
@@ -26,6 +27,10 @@ export default async function BoardPage(props: PageProps) {
       <Board
         name={boardInfo.metadata.boardName.toString()}
         id={boardId} />
+      <div className="fixed inset-x-0 bottom-0 z-50 mb-4 mx-8">
+          <BoardSummary />
+      </div>
+
     </div>
   );
 }
