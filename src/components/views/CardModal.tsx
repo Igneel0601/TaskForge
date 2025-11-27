@@ -16,10 +16,10 @@ export default function CardModal() {
   }
 
   useEffect(() => {
-    if (params.cardId) {
+    if (params?.cardId) {
       updateMyPresence({cardId: params.cardId.toString()});
     }
-  }, [params]);
+  }, [params?.cardId, updateMyPresence]);
 
   return (
     <>

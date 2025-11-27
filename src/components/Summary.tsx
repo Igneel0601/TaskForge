@@ -173,7 +173,7 @@ function Summary() {
 
               {!loading && !summary && !error && (
                 <div className="py-8 text-center text-gray-500 text-sm">
-                  No summary available. Click "Generate summary" to create one.
+                  No summary available. Click &quot;Generate summary&quot; to create one.
                 </div>
               )}
             </div>
