@@ -75,6 +75,13 @@ button.with-icon{
     }
 }
 
+/* Remove any inner default border that Tiptap/ProseMirror may add */
+.ProseMirror {
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
 .lb-portal{
     z-index: 30;
 }

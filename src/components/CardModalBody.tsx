@@ -48,7 +48,11 @@ export default function CardModalBody() {
     if (params.cardId && setOpenCard) {
       setOpenCard(params.cardId.toString());
     }
-  }, [params]);
+    return () => {
+      // clear open card when unmounting
+      if (setOpenCard) setOpenCard(null);
+    };
+  }, [params.cardId, setOpenCard]);
 
   function handleDelete() {
     deleteCard(params.cardId);
